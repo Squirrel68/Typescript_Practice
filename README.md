@@ -5,6 +5,12 @@
 ```
 - kiểu any: cho phép lưu trữ bất kỳ giá trị nào
 - kiểu enum: cho phép lưu trữ một tập hợp các giá trị cố định
+- kiểu tuple: Hoạt động như một array, nhưng:
+    +Số lượng phần tử cố định, và cần được khai báo trước
+    + Mỗi phần tử có thể có kiểu dữ liệu khác nhau, và cần được khai báo trước
+- Union: Cho phép một biến có thể chứa nhiều kiểu dữ liệu khác nhau
+- alias: tạo ra một kiểu dữ liệu mới từ các kiểu dữ liệu có sẵn
+- kiểu void: không trả về giá trị
 ```
 
 ## 3. OOP
@@ -76,3 +82,8 @@ Khi khai báo biến hoặc phương thức trong CLass ngoài từ khóa public
     <kiểu-dữ-liệu>biến
     biến as kiểu-dữ-liệu
 ```
+
+### 7. readonly
+
+readonly thường được sử dụng cho các thuộc tính của class, interface
+const thường được sử dụng cho các biến
