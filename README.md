@@ -18,6 +18,7 @@
 ### 3.1. Encapsulation (Tính đóng gói)
 
 ```
+Access Modifier:
 - private: chỉ có thể truy cập trong class
 - protected: chỉ có thể truy cập trong class và các class con
 - public: có thể truy cập từ bất kỳ đâu
@@ -27,7 +28,7 @@
 
 ```
 - Class con kế thừa từ class cha các thuộc tính và phương thức của class cha qua từ khóa extends
-- Typescript không hỗ trợ đa kế thừa, nên để đa kế thừa thì 1 class mình sẽ implements nhiều interface
+- Typescript không hỗ trợ đa kế thừa, nên để đa kế thừa thì 1 class sẽ implements nhiều interface
 
 ```
 
