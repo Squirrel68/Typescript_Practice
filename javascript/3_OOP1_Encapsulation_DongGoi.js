@@ -32,7 +32,7 @@ class Intern extends Staff {
     }
     printInfoIntern() {
         console.log("----- Intern Information -----");
-        console.log(`Address: ${this.address}, Position: ${this.position}`);
+        console.log(`Address: ${this.address}, Position: ${this.position}`); // address is protected property, position is public property, so we can access them directly
         console.log(`Fullname: ${this.getFullname()}, Age: ${this.getAge()}`);
     }
 }
