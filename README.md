@@ -4,11 +4,16 @@
 
 ```
 - kiểu any: cho phép lưu trữ bất kỳ giá trị nào
+- kiểu unknown: giống như kiểu any, nhưng không cho phép thực hiện các phép toán trên kiểu dữ liệu này, cần phải ép kiểu trước khi sử dụng
+- kiểu never: không nhận giá trị, thường được sử dụng cho các hàm không bao giờ trả về giá trị. Thường được sử dụng cho các hàm luôn ném ra lỗi hoặc vòng lặp vô hạn
 - kiểu enum: cho phép lưu trữ một tập hợp các giá trị cố định
 - kiểu tuple: Hoạt động như một array, nhưng:
     +Số lượng phần tử cố định, và cần được khai báo trước
     + Mỗi phần tử có thể có kiểu dữ liệu khác nhau, và cần được khai báo trước
 - Union: Cho phép một biến có thể chứa nhiều kiểu dữ liệu khác nhau
+- Intersection: Cho phép tạo ra một kiểu dữ liệu mới từ việc kết hợp các kiểu dữ liệu đã có
+    + Ký hiệu: &
+    + Ví dụ: type A = B & C
 - alias: tạo ra một kiểu dữ liệu mới từ các kiểu dữ liệu có sẵn
 - kiểu void: không trả về giá trị
 ```
@@ -86,5 +91,47 @@ Khi khai báo biến hoặc phương thức trong CLass ngoài từ khóa public
 
 ### 7. readonly
 
-readonly thường được sử dụng cho các thuộc tính của class, interface
-const thường được sử dụng cho các biến
+```
+- readonly thường được sử dụng cho các thuộc tính của class, interface
+- const thường được sử dụng cho các biến
+```
+
+### 8. parameter default & parameter optional
+
+### 9. Utility Types
+
+```
+- Utility Types là một số kiểu dữ liệu được xây dựng sẵn trong TypeScript, giúp chúng ta tạo ra các kiểu dữ liệu mới từ các kiểu dữ liệu đã có, trong đó thêm hoặc bớt đi một số thuộc tính của kiểu dữ liệu đã có
+- Giống Lớp bọc (Wrapper class) trong Java
+- Partial<Type>: Tạo ra một kiểu dữ liệu mới từ kiểu dữ liệu đã có, trong đó tất cả các thuộc tính của kiểu dữ liệu đó đều trở thành optional
+- Readonly<Type>: Tạo ra một kiểu dữ liệu mới từ kiểu dữ liệu đã có, trong đó tất cả các thuộc tính của kiểu dữ liệu đó đều trở thành readonly
+- Record<Keys, Type>: Tạo ra một kiểu dữ liệu mới từ kiểu dữ liệu đã có, trong đó tất cả các thuộc tính của kiểu dữ liệu đó đều trở thành optional
+- Pick<Type, Keys>: Tạo ra một kiểu dữ liệu mới từ kiểu dữ liệu đã có, trong đó chỉ chứa các thuộc tính được chỉ định
+- Omit<Type, Keys>: Tạo ra một kiểu dữ liệu mới từ kiểu dữ liệu đã có, trong đó loại bỏ các thuộc tính được chỉ định
+- Exclude<Type, ExcludedUnion>: Tạo ra một kiểu dữ liệu mới từ kiểu dữ liệu đã có, trong đó loại bỏ các kiểu dữ liệu được chỉ định
+- Extract<Type, Union>: Tạo ra một kiểu dữ liệu mới từ kiểu dữ liệu đã có, trong đó chỉ chứa các kiểu dữ liệu được chỉ định
+- NonNullable<Type>: Tạo ra một kiểu dữ liệu mới từ kiểu dữ liệu đã có, trong đó loại bỏ null và undefined
+- ReturnType<Type>: Tạo ra một kiểu dữ liệu mới từ kiểu dữ liệu đã có, trong đó chỉ chứa kiểu dữ liệu trả về của hàm
+- InstanceType<Type>: Tạo ra một kiểu dữ liệu mới từ kiểu dữ liệu đã có, trong đó chỉ chứa kiểu dữ liệu của một instance
+```
+
+### 10. Decorator
+
+```
+
+- Decorator là một tính năng mới của TypeScript, giúp chúng ta thêm metadata cho class, method, property, parameter
+- Decorator được sử dụng bằng cách sử dụng ký hiệu @ trước tên của decorator
+- Decorator có thể nhận tham số hoặc không
+- Decorator có thể trả về một hàm hoặc không
+- Decorator có thể được sử dụng cho class, method, property, parameter
+- Decorator có thể được sử dụng nhiều lần cho một class, method, property, parameter
+- Decorator có thể được sử dụng cho class constructor
+- Decorator có thể được sử dụng cho class method
+- Decorator có thể được sử dụng cho class property
+- Decorator có thể được sử dụng cho class parameter
+
+```
+
+```
+
+```
